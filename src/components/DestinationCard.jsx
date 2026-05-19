@@ -16,14 +16,22 @@ export default function DestinationCard({ destination, index }) {
       className="group relative rounded-2xl overflow-hidden cursor-pointer border border-dark-border hover:border-gold/40 transition-colors duration-500 bg-dark-card"
       style={{ minHeight: '480px' }}
     >
-      {/* Background gradient (image placeholder) */}
+      {/* Background image */}
+      {destination.image && (
+        <img
+          src={destination.image}
+          alt={destination.name}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          style={{ opacity: hovered ? 0.55 : 0.45 }}
+        />
+      )}
+
+      {/* Gradient fallback (always shown, stronger when no image) */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${destination.gradient} transition-opacity duration-500`}
-        style={{ opacity: hovered ? 0.8 : 0.6 }}
+        style={{ opacity: destination.image ? (hovered ? 0.4 : 0.5) : (hovered ? 0.8 : 0.6) }}
       />
-
-      {/* Overlay pattern */}
-      <div className="absolute inset-0 opacity-20 stars-bg" />
 
       {/* Content overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
