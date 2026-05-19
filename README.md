@@ -62,12 +62,6 @@ npm run dev
 
 > La clé API Mistral est intégrée dans le JS lors du build — le chatbot fonctionne en production sans configuration supplémentaire.
 
-### Option alternative : Vercel
-
-1. Lancer le build : `npm run build`
-2. Aller sur [vercel.com](https://vercel.com), importer le projet depuis GitHub
-3. Vercel détecte automatiquement Vite et déploie
-
 ## Crédits
 
 - Polices : Google Fonts (Cinzel, Inter)

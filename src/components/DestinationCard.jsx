@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function DestinationCard({ destination, index }) {
   const [hovered, setHovered] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <motion.div
@@ -103,16 +105,15 @@ export default function DestinationCard({ destination, index }) {
               <div className="text-gray-400 text-xs">{destination.duration}</div>
               <div className="text-gray-500 text-xs">{destination.difficulty}</div>
             </div>
-            <a
-              href="#contact"
-              className="flex items-center justify-center w-10 h-10 rounded-full border border-gold/50 text-gold hover:bg-gold hover:text-dark transition-all duration-300 text-sm"
+            <button
               onClick={(e) => {
                 e.stopPropagation()
-                document.getElementById('chatbot-toggle')?.click()
+                navigate(`/destination/${destination.id}`)
               }}
+              className="flex items-center justify-center w-10 h-10 rounded-full border border-gold/50 text-gold hover:bg-gold hover:text-dark transition-all duration-300 text-sm"
             >
               →
-            </a>
+            </button>
           </div>
         </div>
       </div>
