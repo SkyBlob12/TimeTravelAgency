@@ -51,10 +51,22 @@ npm run dev
 
 ## Déploiement
 
-```bash
-npm run build
-# Déployer le dossier dist/ sur Vercel, Netlify ou GitHub Pages
-```
+`npm run build` génère un dossier `dist/` contenant les fichiers statiques optimisés (HTML/CSS/JS minifiés). Ce dossier est ce qui doit être mis en ligne — le projet n'a pas de backend, tout tourne côté navigateur.
+
+### Option recommandée : Netlify (drag & drop, gratuit)
+
+1. Lancer le build : `npm run build`
+2. Aller sur [netlify.com](https://netlify.com) et se connecter
+3. Glisser-déposer le dossier `dist/` dans la zone de dépôt Netlify
+4. Une URL publique (`https://xxx.netlify.app`) est générée instantanément
+
+> La clé API Mistral est intégrée dans le JS lors du build — le chatbot fonctionne en production sans configuration supplémentaire.
+
+### Option alternative : Vercel
+
+1. Lancer le build : `npm run build`
+2. Aller sur [vercel.com](https://vercel.com), importer le projet depuis GitHub
+3. Vercel détecte automatiquement Vite et déploie
 
 ## Crédits
 
