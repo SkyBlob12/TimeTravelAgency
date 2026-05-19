@@ -62,11 +62,18 @@ npm run dev
 
 > La clé API Mistral est intégrée dans le JS lors du build — le chatbot fonctionne en production sans configuration supplémentaire.
 
+## URL de la webapp déployée
+
+> À compléter après déploiement : https://resplendent-malabi-4d0de2.netlify.app/
+
 ## Crédits
 
-- Polices : Google Fonts (Cinzel, Inter)
-- Animations : Framer Motion
-- API IA : Mistral AI
+- Polices : [Google Fonts](https://fonts.google.com) — Cinzel, Inter
+- Animations : [Framer Motion](https://www.framer.com/motion/)
+- Routing : [React Router](https://reactrouter.com/)
+- Images : [Unsplash](https://unsplash.com) (libres de droits)
+- API IA Chatbot : [Mistral AI](https://mistral.ai) — modèle `mistral-small-latest`
+- Code généré avec : [Claude Code](https://claude.ai/code) (Anthropic)
 
 ## Licence
 
